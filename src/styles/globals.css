@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .glare-wrapper {
+	pointer-events: none;
+} */
+
+body {
+	@apply text-white/90 bg-black-10;
+}

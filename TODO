@@ -1,0 +1,24 @@
+client:
+	☐ finish stats. change to modifiers. default value 0. can add or remove. each modifier is applied to a property that needs a display name and also to know how to format it. create new instance of base modifiers and add state to it.
+	☐ fix css layout
+	☐ supply lines
+	☐ move filter state to store
+	☐ store card types as enum or obj literal. then iterate through to generate checkboxes
+	☐ special effects. better way to store string only + need way to store conditional effects.
+	☐ tidy up
+	☐ how to extract cards + images
+		options:
+			- unreal extract
+			- google cloud vision
+			- manually
+	☐ set chararacter
+	☐ query param url?
+	☐ framer motion - drag reorder, card hover + gleam
+
+server:
+	☐ rate cards + sort
+	☐ save deck + name + share
+	☐ browse builds
+	☐ tag builds
+	☐ uuid url for build
+	☐ what to use as card id for db?
