@@ -1,10 +1,10 @@
 import create from 'zustand';
-import { Card } from './data/types';
+import { CardInterface } from './data/types';
 
 interface StoreInterface {
-	cardSelection: Card[];
-	toggleCard: (card: Card) => void;
-	reorderCards: (cards: Card[]) => void;
+	cardSelection: CardInterface[];
+	toggleCard: (card: CardInterface) => void;
+	reorderCards: (cards: CardInterface[]) => void;
 }
 
 export const useStore = create<StoreInterface>((set) => ({

@@ -15,20 +15,20 @@ export interface SpecialEffect extends EffectBase {
 	isBuff: boolean;
 }
 
-export type Effect = ValueEffect | SpecialEffect;
+export type EffectInterface = ValueEffect | SpecialEffect;
 
-export interface Card {
+export interface CardInterface {
 	name: string;
 	imageUrl: string;
 	// cost: number;
 	type: keyof typeof cardTypes;
 	affinity: keyof typeof cardAffinities;
-	effects: Effect[];
+	effects: EffectInterface[];
 }
 
 export interface SupplyLine {
 	name: string;
-	cards: Card[];
+	cards: CardInterface[];
 }
 
 export const cardTypes = {
