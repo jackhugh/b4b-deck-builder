@@ -5,26 +5,36 @@ import { playerModifiers } from '~/data/player-modifiers';
 import { otherCards } from '~/data/other-cards';
 import { supplyLines } from '~/data/supply-lines';
 
-const sortedCards = [...otherCards, ...supplyLines.flatMap((elem) => elem.cards)].sort();
-
 // TODO - debounce with cache?
 // hyphen not working eg. Hyper-Focused
 // create register filter function
+// sort function. may best be implemented within match sorter as that seems to sort by default?
 export function useCardFilters() {
 	const filters = useStore((state) => state.filters);
 	const cardSelection = useStore((state) => state.cardSelection);
 	const unlockedSupplyLines = useStore((state) => state.unlockedSupplyLines);
 
-	supplyLines.map((supplyLine) =>
-		supplyLine.cards.filter((card, i) => {
-			if (unlockedSupplyLines[supplyLine.name]) {
-			}
-		})
+	const cards = useMemo(
+		() => [
+			...otherCards,
+			...supplyLines
+				.map((supplyLine, i) => {
+					if (!filters.unlockedCards) return supplyLine.cards;
+					if (!unlockedSupplyLines[supplyLine.name]) return supplyLine.cards;
+
+					const index = supplyLines[i].cards.findIndex(
+						(card) => card.imageUrl === unlockedSupplyLines[supplyLine.name]?.imageUrl
+					);
+					return supplyLine.cards.filter((card, i) => i <= index - 1);
+				})
+				.flat(),
+		],
+		[unlockedSupplyLines, filters.unlockedCards]
 	);
 
 	return useMemo(
 		() =>
-			matchSorter(sortedCards, filters.text, {
+			matchSorter(cards, filters.text, {
 				keys: [
 					'name',
 					'type',

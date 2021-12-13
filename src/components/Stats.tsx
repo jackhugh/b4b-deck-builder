@@ -23,7 +23,7 @@ export default function Stats() {
 					>
 						{stat.displayValue}
 					</span>
-					<span>{stat.name}</span>
+					<span className='title text-sm flex items-center'>{stat.name}</span>
 				</>
 			))}
 		</motion.div>

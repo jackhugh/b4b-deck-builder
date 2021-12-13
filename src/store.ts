@@ -11,7 +11,8 @@ interface StoreInterface {
 		modifiers: Modifiers[];
 		unlockedCards: boolean;
 	};
-	unlockedSupplyLines: Partial<Record<SupplyTracks, keyof SupplyLine['cards']>>;
+	// TODO - maybe just use the supply-lines file to store supply track info
+	unlockedSupplyLines: Partial<Record<SupplyTracks, CardInterface>>;
 	setUnlockedSupplyLine: (supplyLine: SupplyTracks, card: CardInterface) => void;
 	resetFilters: () => void;
 	setFilters: (setFilters: (filters: StoreInterface['filters']) => Partial<StoreInterface['filters']>) => void;
@@ -41,6 +42,7 @@ export const useStore = create<StoreInterface>((set) => ({
 	setFilters: (fn) => set((state) => ({ filters: { ...state.filters, ...fn(state.filters) } })),
 	toggleCard: (card) =>
 		set((state) => ({
+			// TODO - this probably won't work with persist as card will be a different instance - need to find all strict equality comparison examples and replace with .find() solution.
 			cardSelection: state.cardSelection.includes(card)
 				? state.cardSelection.filter((elem) => elem !== card)
 				: [...state.cardSelection, card],

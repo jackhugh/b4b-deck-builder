@@ -12,7 +12,9 @@ export default function EditSupplyLines({ closeModal }: EditSupplyLinesProps) {
 	return (
 		<Modal closeModal={closeModal}>
 			<div className='title text-2xl'>Supply Line Unlocks</div>
-			<p>Enter the last card you unlocked for each supply track.</p>
+			<p>
+				Select the next card you will <span className='font-bold'>unlock</span> for each supply track.
+			</p>
 			{objectKeys(supplyTracks)
 				.filter((key) => supplyTracks[key].isUnlockable)
 				.map((key) => (

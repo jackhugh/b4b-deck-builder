@@ -4,9 +4,10 @@ import { useStore } from '~/store';
 import { objectKeys, setInArray } from '~/util';
 import Select from 'react-select';
 import { playerModifiers } from '~/data/player-modifiers';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import EditSupplyLines from './EditSupplyLines';
 
+// TODO - clean up and move elsewhere
 const effectsDropdownOptions = [
 	...new Set(
 		objectKeys(playerModifiers)
@@ -29,6 +30,12 @@ export function CardFilter() {
 	const resetFilters = useStore((state) => state.resetFilters);
 
 	const [editSupplyLines, setEditSupplyLines] = useState(false);
+
+	useEffect(() => {
+		if (objectKeys(unlockedSupplyLines).length) {
+			setFilters(() => ({ unlockedCards: true }));
+		}
+	}, [unlockedSupplyLines]);
 
 	return (
 		<div className='flex flex-col items-start gap-4 w-[20rem] sticky top-[5rem]'>

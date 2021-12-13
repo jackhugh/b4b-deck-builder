@@ -1,6 +1,6 @@
 import { CardInterface } from './types';
 
-export const otherCards: CardInterface[] = [
+export const otherCards: Readonly<CardInterface[]> = [
 	{
 		imageUrl: 'card_004.png',
 		effects: [{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'reloadSpeed' }],
