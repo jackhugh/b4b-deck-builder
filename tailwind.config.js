@@ -1,3 +1,5 @@
+const tw = require('tailwindcss/defaultConfig');
+
 module.exports = {
 	mode: 'jit',
 	purge: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -5,7 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Poppins'],
+				sans: ['Poppins', ...tw.theme.fontFamily.sans],
 			},
 			colors: {
 				brand: '#fe0000',

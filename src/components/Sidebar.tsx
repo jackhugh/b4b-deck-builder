@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from 'react';
 
 type SidebarProps = { tabs: { name: string; renderFunction: () => React.ReactNode }[] };
 
@@ -7,22 +8,33 @@ export default function Sidebar({ tabs }: SidebarProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	return (
-		<aside className='bg-black-5 min-h-full rounded-l-xl'>
-			<div className='flex justify-evenly border-b-2 border-brand'>
+		<aside className='bg-black-5 rounded-l-xl h-full flex flex-col'>
+			<div className='flex justify-evenly sticky top-0 z-10 bg-black-5 rounded-tl-xl'>
 				{tabs.map((tab, i) => (
-					<button
+					<SidebarTab
 						key={i}
-						onClick={() => setActiveTab(i)}
-						className={clsx(
-							'uppercase text-lg font-bold rounded-t-xl w-full p-2',
-							activeTab === i && 'bg-brand'
-						)}
-					>
-						{tab.name}
-					</button>
+						name={tab.name}
+						setActiveTab={() => setActiveTab(i)}
+						isActive={activeTab === i}
+					/>
 				))}
 			</div>
-			<div className='p-4'>{tabs[activeTab].renderFunction()}</div>
+			<motion.div key={activeTab} layoutScroll className='px-4 py-2 h-full overflow-y-auto'>
+				{tabs[activeTab].renderFunction()}
+			</motion.div>
 		</aside>
+	);
+}
+
+type SidebarTabProps = { setActiveTab: () => void; name: string; isActive: boolean };
+
+function SidebarTab({ name, setActiveTab, isActive }: SidebarTabProps) {
+	return (
+		<div className='w-full'>
+			<button onClick={setActiveTab} className={clsx('title text-lg w-full p-2 relative')}>
+				{name}
+			</button>
+			{isActive && <motion.div layoutId='tab-underline' className='h-[1px] bg-brand' />}
+		</div>
 	);
 }

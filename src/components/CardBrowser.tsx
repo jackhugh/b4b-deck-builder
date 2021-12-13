@@ -1,24 +1,25 @@
-import cards from '~/data/card-data.json';
-import { CardInterface } from '~/data/types';
-import { useStore } from '~/store';
+import { AnimatePresence } from 'framer-motion';
+import { useCardFilters } from '~/hooks/useCardFilters';
 import Card from './Card';
-import { motion } from 'framer-motion';
+import { CardFilter } from './CardFilter';
 
 export default function CardBrowser() {
-	const cardSelection = useStore((state) => state.cardSelection);
+	const cards = useCardFilters();
 
 	return (
-		<div className='flex'>
-			<motion.div
+		<div className='flex items-start gap-4'>
+			<CardFilter />
+
+			<div
 				className='grid justify-center w-full gap-4'
-				style={{ gridTemplateColumns: 'repeat(auto-fill, 15rem' }}
+				style={{ gridTemplateColumns: 'repeat(auto-fill, 15rem)' }}
 			>
-				{cards
-					.filter((card) => !cardSelection.includes(card as CardInterface))
-					.map((card) => (
-						<Card card={card as CardInterface} key={card.imageUrl} />
-					))}
-			</motion.div>
+				{/* <AnimatePresence> */}
+				{cards.map((card) => (
+					<Card card={card} key={card.imageUrl} />
+				))}
+				{/* </AnimatePresence> */}
+			</div>
 		</div>
 	);
 }

@@ -1,3 +1,7 @@
+import { playerModifiers } from '~/data/player-modifiers';
+
+export type Modifiers = keyof typeof playerModifiers;
+
 interface EffectBase {
 	type: string;
 	isTeamEffect: boolean;
@@ -6,13 +10,14 @@ interface EffectBase {
 export interface ValueEffect extends EffectBase {
 	type: 'value';
 	value: number;
-	appliedTo: string;
+	appliedTo: Modifiers;
 }
 
 export interface SpecialEffect extends EffectBase {
 	type: 'special';
 	description: string;
 	isBuff: boolean;
+	appliedTo: Modifiers[];
 }
 
 export type EffectInterface = ValueEffect | SpecialEffect;
@@ -20,16 +25,34 @@ export type EffectInterface = ValueEffect | SpecialEffect;
 export interface CardInterface {
 	name: string;
 	imageUrl: string;
-	// cost: number;
-	type: keyof typeof cardTypes;
-	affinity: keyof typeof cardAffinities;
+	type: CardTypes;
+	affinity: CardAffinities;
 	effects: EffectInterface[];
 }
 
 export interface SupplyLine {
-	name: string;
+	name: SupplyTracks;
 	cards: CardInterface[];
 }
+
+export const supplyTracks = {
+	strip: {
+		name: 'The Strip',
+		isUnlockable: false,
+	},
+	alley: {
+		name: "Paul's Alley",
+		isUnlockable: true,
+	},
+	clinic: {
+		name: 'The Clinic',
+		isUnlockable: true,
+	},
+	nest: {
+		name: "The Crow's Nest",
+		isUnlockable: true,
+	},
+};
 
 export const cardTypes = {
 	offense: {
@@ -60,3 +83,7 @@ export const cardAffinities = {
 		name: 'Fortune',
 	},
 };
+
+export type SupplyTracks = keyof typeof supplyTracks;
+export type CardTypes = keyof typeof cardTypes;
+export type CardAffinities = keyof typeof cardAffinities;
