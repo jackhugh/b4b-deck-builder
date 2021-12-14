@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useStore } from '~/store';
 import clsx from 'clsx';
 import { CardInterface } from '~/data/types';
+import Image from 'next/image';
 
 type CardProps = { card: CardInterface };
 
@@ -27,7 +28,13 @@ export default React.memo(function Card({ card }: CardProps) {
 					layout='position'
 					// layoutId={card.imageUrl}
 				>
-					<img src={card.imageUrl} className='block rounded-lg' draggable={false} />
+					<Image
+						src={card.imageUrl}
+						className='block rounded-lg'
+						width={15 * 16}
+						height={15 * 16 * 1.5327}
+						draggable={false}
+					/>
 				</motion.button>
 			)}
 		</motion.div>
