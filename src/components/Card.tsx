@@ -28,13 +28,7 @@ export default React.memo(function Card({ card }: CardProps) {
 					layout='position'
 					// layoutId={card.imageUrl}
 				>
-					<Image
-						src={card.imageUrl}
-						className='block rounded-lg'
-						width={15 * 16}
-						height={15 * 16 * 1.5327}
-						draggable={false}
-					/>
+					<img src={card.imageUrl} className='block rounded-lg' draggable={false} alt={card.name} />
 				</motion.button>
 			)}
 		</motion.div>
