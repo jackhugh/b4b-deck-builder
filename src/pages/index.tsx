@@ -7,7 +7,7 @@ import { useStore } from '~/store';
 
 export default function Index() {
 	const headerHeight = '4rem';
-	const sidebarPad = '1rem';
+	const sidebarPad = '2rem';
 
 	return (
 		<div className='relative'>

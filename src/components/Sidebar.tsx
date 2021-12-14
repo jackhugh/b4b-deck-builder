@@ -8,7 +8,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	return (
-		<aside className='bg-black-5 rounded-l-xl h-full flex flex-col'>
+		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10 bg-gradient-to-r to-brand/5 from-black'>
 			<div className='flex justify-evenly sticky top-0 z-10 bg-black-5 rounded-tl-xl'>
 				{tabs.map((tab, i) => (
 					<SidebarTab
@@ -34,7 +34,7 @@ function SidebarTab({ name, setActiveTab, isActive }: SidebarTabProps) {
 			<button onClick={setActiveTab} className={clsx('title text-lg w-full p-2 relative')}>
 				{name}
 			</button>
-			{isActive && <motion.div layoutId='tab-underline' className='h-[1px] bg-brand' />}
+			{isActive && <motion.div layoutId='tab-underline' className='h-[2px] bg-brand/30' />}
 		</div>
 	);
 }

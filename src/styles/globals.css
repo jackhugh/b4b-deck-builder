@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-	@apply text-white/90 bg-black-10;
+	@apply text-white/90 bg-black-5;
 }
 
 @layer utilities {
 	.title {
-		@apply uppercase font-bold text-white;
+		@apply uppercase font-bold text-white/95;
 	}
 }
