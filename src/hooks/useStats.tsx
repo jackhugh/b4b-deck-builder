@@ -6,16 +6,18 @@ import { useMemo } from 'react';
 
 export function useStats() {
 	const cards = useStore((state) => state.cardSelection);
+	const cleaner = useStore((state) => state.cleaner);
 
 	return useMemo(() => {
 		const effects: Record<string, number> = {};
 
-		cards.forEach((card) => {
-			card.effects.forEach((effect) => {
-				if (effect.type === 'value') {
-					effects[effect.appliedTo] = (effects[effect.appliedTo] ?? 0) + effect.value;
-				}
-			});
+		const allEffects = cards.flatMap((card) => card.effects);
+		cleaner && allEffects.push(...cleaner.effects);
+
+		allEffects.forEach((effect) => {
+			if (effect.type === 'value') {
+				effects[effect.appliedTo] = (effects[effect.appliedTo] ?? 0) + effect.value;
+			}
 		});
 
 		return objectKeys(effects)
@@ -32,5 +34,5 @@ export function useStats() {
 				};
 			})
 			.sort((a, b) => b.value - a.value);
-	}, [cards]);
+	}, [cards, cleaner]);
 }

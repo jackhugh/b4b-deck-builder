@@ -48,6 +48,7 @@ module.exports = {
 			},
 			boxShadow: {
 				brand: '0 0 20px 0px #fe000045',
+				blur: '0 0 20px 0px black',
 			},
 		},
 	},

@@ -2,6 +2,7 @@ import { CardInterface } from '~/data/types';
 import { motion, Reorder } from 'framer-motion';
 import { useStore } from '~/store';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 type CardPreviewProps = { card: CardInterface; number: number };
 
@@ -23,10 +24,12 @@ export default function CardPreview({ card, number }: CardPreviewProps) {
 				// layoutId={card.imageUrl}
 			>
 				{/* REVIEW: fixed width */}
-				<div className='text-xl font-bold self-center w-4 text-center'>{number}</div>
+				<div className={clsx('text-xl font-bold self-center w-4 text-center', number > 15 && 'text-brand')}>
+					{number}
+				</div>
 				<div
 					className='flex-1 h-full rounded-lg bg-cover'
-					style={{ backgroundImage: `url(/cards/${card.imageUrl})` }}
+					style={{ backgroundImage: `url(${card.imageUrl})` }}
 				/>
 
 				{/* {showPreview && (

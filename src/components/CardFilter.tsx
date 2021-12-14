@@ -38,7 +38,7 @@ export function CardFilter() {
 	}, [unlockedSupplyLines]);
 
 	return (
-		<div className='flex flex-col items-start gap-4 w-[20rem] sticky top-[5rem]'>
+		<div className='flex flex-col items-start gap-4'>
 			<div className='flex w-full items-baseline'>
 				<span className='text-xl title'>Filter</span>
 				<button className='ml-auto text-sm' onClick={resetFilters}>
@@ -136,7 +136,7 @@ export function CardFilter() {
 
 type FilterSection = { children: React.ReactNode; name: string };
 
-function FilterSection({ children, name }: FilterSection) {
+export function FilterSection({ children, name }: FilterSection) {
 	return (
 		<div className='flex flex-col items-start gap-2 w-full'>
 			<span className='title'>{name}</span>
@@ -153,7 +153,7 @@ type CheckboxLabelProps = {
 	disabled?: boolean;
 };
 
-function CheckboxLabel({ name, isChecked, onChange, className, disabled = false }: CheckboxLabelProps) {
+export function CheckboxLabel({ name, isChecked, onChange, className, disabled = false }: CheckboxLabelProps) {
 	return (
 		<label className='flex items-center gap-2'>
 			<input

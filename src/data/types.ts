@@ -84,6 +84,13 @@ export const cardAffinities = {
 	},
 };
 
+export interface CleanerInterface {
+	name: string;
+	description: string;
+	imageUrl: string;
+	effects: EffectInterface[];
+}
+
 export type SupplyTracks = keyof typeof supplyTracks;
 export type CardTypes = keyof typeof cardTypes;
 export type CardAffinities = keyof typeof cardAffinities;

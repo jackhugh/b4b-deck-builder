@@ -1,8 +1,11 @@
 import create from 'zustand';
-import { CardAffinities, CardInterface, CardTypes, Modifiers, SupplyLine, SupplyTracks } from './data/types';
+import { CardAffinities, CardInterface, CardTypes, CleanerInterface, Modifiers, SupplyTracks } from './data/types';
 
 interface StoreInterface {
 	cardSelection: CardInterface[];
+	cleaner: CleanerInterface | null;
+	// TODO - maybe just use the supply-lines file to store supply track info
+	unlockedSupplyLines: Partial<Record<SupplyTracks, CardInterface>>;
 	filters: {
 		text: string;
 		type: CardTypes[];
@@ -11,8 +14,7 @@ interface StoreInterface {
 		modifiers: Modifiers[];
 		unlockedCards: boolean;
 	};
-	// TODO - maybe just use the supply-lines file to store supply track info
-	unlockedSupplyLines: Partial<Record<SupplyTracks, CardInterface>>;
+	setCleaner: (cleaner: CleanerInterface) => void;
 	setUnlockedSupplyLine: (supplyLine: SupplyTracks, card: CardInterface) => void;
 	resetFilters: () => void;
 	setFilters: (setFilters: (filters: StoreInterface['filters']) => Partial<StoreInterface['filters']>) => void;
@@ -23,6 +25,8 @@ interface StoreInterface {
 
 export const useStore = create<StoreInterface>((set) => ({
 	cardSelection: [],
+	cleaner: null,
+	unlockedSupplyLines: {},
 	filters: {
 		text: '',
 		type: [],
@@ -31,7 +35,7 @@ export const useStore = create<StoreInterface>((set) => ({
 		modifiers: [],
 		unlockedCards: false,
 	},
-	unlockedSupplyLines: {},
+	setCleaner: (cleaner) => set(() => ({ cleaner })),
 	setUnlockedSupplyLine: (supplyLine, card) =>
 		set((state) => ({ unlockedSupplyLines: { ...state.unlockedSupplyLines, [supplyLine]: card } })),
 	resetSelection: () => set(() => ({ cardSelection: [] })),

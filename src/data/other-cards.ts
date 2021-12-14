@@ -2,14 +2,14 @@ import { CardInterface } from './types';
 
 export const otherCards: Readonly<CardInterface[]> = [
 	{
-		imageUrl: 'card_004.png',
+		imageUrl: '/cards/card_004.png',
 		effects: [{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'reloadSpeed' }],
 		name: 'Reload Drills',
 		type: 'offense',
 		affinity: 'reflex',
 	},
 	{
-		imageUrl: 'card_042.png',
+		imageUrl: '/cards/card_042.png',
 		effects: [
 			{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'stamina' },
 			{ isTeamEffect: false, type: 'value', value: -0.75, appliedTo: 'staminaRegeneration' },
@@ -27,7 +27,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'reflex',
 	},
 	{
-		imageUrl: 'card_052.png',
+		imageUrl: '/cards/card_052.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -49,7 +49,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'reflex',
 	},
 	{
-		imageUrl: 'card_053.png',
+		imageUrl: '/cards/card_053.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -71,14 +71,14 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'reflex',
 	},
 	{
-		imageUrl: 'card_067.png',
+		imageUrl: '/cards/card_067.png',
 		effects: [{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'healingEfficiency' }],
 		name: 'Antibiotic Ointment',
 		type: 'defense',
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_069.png',
+		imageUrl: '/cards/card_069.png',
 		effects: [
 			{ isTeamEffect: false, type: 'value', value: 0.6, appliedTo: 'healingEfficiency' },
 			{ isTeamEffect: false, type: 'value', value: -0.5, appliedTo: 'useSpeed' },
@@ -88,7 +88,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_081.png',
+		imageUrl: '/cards/card_081.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -103,7 +103,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_082.png',
+		imageUrl: '/cards/card_082.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -118,7 +118,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_090.png',
+		imageUrl: '/cards/card_090.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -134,7 +134,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_098.png',
+		imageUrl: '/cards/card_098.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -156,7 +156,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'discipline',
 	},
 	{
-		imageUrl: 'card_112.png',
+		imageUrl: '/cards/card_112.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -172,7 +172,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'brawn',
 	},
 	{
-		imageUrl: 'card_115.png',
+		imageUrl: '/cards/card_115.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -188,7 +188,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'brawn',
 	},
 	{
-		imageUrl: 'card_120.png',
+		imageUrl: '/cards/card_120.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -203,7 +203,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'brawn',
 	},
 	{
-		imageUrl: 'card_134.png',
+		imageUrl: '/cards/card_134.png',
 		effects: [
 			{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'extraLife' },
 			{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -213,7 +213,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'brawn',
 	},
 	{
-		imageUrl: 'card_147.png',
+		imageUrl: '/cards/card_147.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -228,7 +228,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'fortune',
 	},
 	{
-		imageUrl: 'card_149.png',
+		imageUrl: '/cards/card_149.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -244,7 +244,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'fortune',
 	},
 	{
-		imageUrl: 'card_152.png',
+		imageUrl: '/cards/card_152.png',
 		effects: [
 			{
 				isTeamEffect: false,
@@ -266,7 +266,7 @@ export const otherCards: Readonly<CardInterface[]> = [
 		affinity: 'fortune',
 	},
 	{
-		imageUrl: 'card_154.png',
+		imageUrl: '/cards/card_154.png',
 		effects: [
 			{
 				isTeamEffect: false,

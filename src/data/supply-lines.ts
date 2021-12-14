@@ -5,21 +5,21 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 		name: 'strip',
 		cards: [
 			{
-				imageUrl: 'card_100.png',
+				imageUrl: '/cards/card_100.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'health' }],
 				name: 'Vitamins',
 				type: 'defense',
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_055.png',
+				imageUrl: '/cards/card_055.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'ammoCapacity' }],
 				name: 'Ammo Pouch',
 				type: 'offense',
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_124.png',
+				imageUrl: '/cards/card_124.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -46,7 +46,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 		name: 'alley',
 		cards: [
 			{
-				imageUrl: 'card_064.png',
+				imageUrl: '/cards/card_064.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'bulletDamage' },
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'bulletPenetration' },
@@ -56,7 +56,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_056.png',
+				imageUrl: '/cards/card_056.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'ammoCapacity' },
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'staminaEfficiency' },
@@ -66,35 +66,35 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_013.png',
+				imageUrl: '/cards/card_013.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'aimDownSightsSpeed' }],
 				name: 'Hi Vis Sights',
 				type: 'offense',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_058.png',
+				imageUrl: '/cards/card_058.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'accuracy' }],
 				name: 'Front Sight Focus',
 				type: 'offense',
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_135.png',
+				imageUrl: '/cards/card_135.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'offensiveInventory' }],
 				name: 'Grenade Pouch',
 				type: 'offense',
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_085.png',
+				imageUrl: '/cards/card_085.png',
 				effects: [{ isTeamEffect: true, type: 'value', value: 0.1, appliedTo: 'ammoCapacity' }],
 				name: 'Ammo For All',
 				type: 'offense',
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_065.png',
+				imageUrl: '/cards/card_065.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.075, appliedTo: 'bulletDamage' },
 					{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'bulletPenetration' },
@@ -105,7 +105,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_005.png',
+				imageUrl: '/cards/card_005.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'reloadSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -115,7 +115,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_129.png',
+				imageUrl: '/cards/card_129.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -137,7 +137,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_057.png',
+				imageUrl: '/cards/card_057.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.75, appliedTo: 'ammoCapacity' },
 					{
@@ -153,14 +153,14 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_109.png',
+				imageUrl: '/cards/card_109.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'accessoryDamage' }],
 				name: 'Grenade Training',
 				type: 'offense',
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_059.png',
+				imageUrl: '/cards/card_059.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'accuracy' },
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'staminaEfficiency' },
@@ -170,7 +170,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_103.png',
+				imageUrl: '/cards/card_103.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'meleeDamage' },
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -180,7 +180,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_076.png',
+				imageUrl: '/cards/card_076.png',
 				effects: [
 					{
 						isTeamEffect: true,
@@ -196,7 +196,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_094.png',
+				imageUrl: '/cards/card_094.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -211,7 +211,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_136.png',
+				imageUrl: '/cards/card_136.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 2, appliedTo: 'offensiveInventory' },
 					{ isTeamEffect: false, type: 'value', value: -0.1, appliedTo: 'damage' },
@@ -221,7 +221,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_086.png',
+				imageUrl: '/cards/card_086.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -237,7 +237,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_110.png',
+				imageUrl: '/cards/card_110.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'accessoryDamage' },
 					{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'ammoCapacity' },
@@ -247,7 +247,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_006.png',
+				imageUrl: '/cards/card_006.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'reloadSpeed' },
 					{
@@ -263,7 +263,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_128.png',
+				imageUrl: '/cards/card_128.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -279,7 +279,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_104.png',
+				imageUrl: '/cards/card_104.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'meleeDamage' },
 					{
@@ -296,7 +296,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_066.png',
+				imageUrl: '/cards/card_066.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'bulletDamage' },
 					{ isTeamEffect: false, type: 'value', value: 1.5, appliedTo: 'bulletPenetration' },
@@ -313,7 +313,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_015.png',
+				imageUrl: '/cards/card_015.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.8, appliedTo: 'aimDownSightsSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.5, appliedTo: 'aimDownSightsMoveSpeed' },
@@ -323,7 +323,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_143.png',
+				imageUrl: '/cards/card_143.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -339,7 +339,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_150.png',
+				imageUrl: '/cards/card_150.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -355,7 +355,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_137.png',
+				imageUrl: '/cards/card_137.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: -0.1, appliedTo: 'health' },
 					{ isTeamEffect: true, type: 'value', value: 1, appliedTo: 'offensiveInventory' },
@@ -365,7 +365,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_092.png',
+				imageUrl: '/cards/card_092.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -387,7 +387,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_077.png',
+				imageUrl: '/cards/card_077.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -402,7 +402,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_060.png',
+				imageUrl: '/cards/card_060.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'accuracy' },
 					{
@@ -418,7 +418,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_130.png',
+				imageUrl: '/cards/card_130.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -433,7 +433,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_095.png',
+				imageUrl: '/cards/card_095.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -449,7 +449,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_075.png',
+				imageUrl: '/cards/card_075.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -464,7 +464,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_039.png',
+				imageUrl: '/cards/card_039.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'damage' },
 					{ isTeamEffect: false, type: 'value', value: -0.3, appliedTo: 'health' },
@@ -474,7 +474,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_096.png',
+				imageUrl: '/cards/card_096.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -490,7 +490,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_142.png',
+				imageUrl: '/cards/card_142.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -505,7 +505,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_114.png',
+				imageUrl: '/cards/card_114.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -527,7 +527,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_118.png',
+				imageUrl: '/cards/card_118.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -549,7 +549,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_122.png',
+				imageUrl: '/cards/card_122.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -564,7 +564,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_080.png',
+				imageUrl: '/cards/card_080.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'health' },
 					{ isTeamEffect: true, type: 'value', value: 1, appliedTo: 'extraLife' },
@@ -574,7 +574,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_079.png',
+				imageUrl: '/cards/card_079.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -589,7 +589,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_111.png',
+				imageUrl: '/cards/card_111.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'accessoryDamage' },
 					{ isTeamEffect: false, type: 'value', value: -0.25, appliedTo: 'swapSpeed' },
@@ -599,7 +599,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_050.png',
+				imageUrl: '/cards/card_050.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'weakspotDamage' },
 					{
@@ -615,7 +615,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_078.png',
+				imageUrl: '/cards/card_078.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -630,7 +630,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_084.png',
+				imageUrl: '/cards/card_084.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -645,7 +645,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_083.png',
+				imageUrl: '/cards/card_083.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -660,7 +660,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_153.png',
+				imageUrl: '/cards/card_153.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -680,7 +680,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 		name: 'clinic',
 		cards: [
 			{
-				imageUrl: 'card_061.png',
+				imageUrl: '/cards/card_061.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'damageResistance' },
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -690,7 +690,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_106.png',
+				imageUrl: '/cards/card_106.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'traumaResistance' },
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -700,7 +700,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_087.png',
+				imageUrl: '/cards/card_087.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -716,7 +716,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_068.png',
+				imageUrl: '/cards/card_068.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'healingEfficiency' },
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'staminaEfficiency' },
@@ -726,7 +726,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_073.png',
+				imageUrl: '/cards/card_073.png',
 				effects: [
 					{
 						isTeamEffect: true,
@@ -742,7 +742,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_062.png',
+				imageUrl: '/cards/card_062.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'damageResistance' },
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -753,7 +753,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_101.png',
+				imageUrl: '/cards/card_101.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'health' },
 					{ isTeamEffect: false, type: 'value', value: -0.15, appliedTo: 'ammoCapacity' },
@@ -763,7 +763,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_133.png',
+				imageUrl: '/cards/card_133.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -778,7 +778,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_091.png',
+				imageUrl: '/cards/card_091.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -800,14 +800,14 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_138.png',
+				imageUrl: '/cards/card_138.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'supportInventory' }],
 				name: 'Fanny Pack',
 				type: 'defense',
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_007.png',
+				imageUrl: '/cards/card_007.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'meleeStaminaEfficiency' },
@@ -818,14 +818,14 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_019.png',
+				imageUrl: '/cards/card_019.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'reviveSpeed' }],
 				name: 'Smelling Salts',
 				type: 'utility',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_107.png',
+				imageUrl: '/cards/card_107.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'traumaResistance' },
 					{ isTeamEffect: false, type: 'value', value: -0.15, appliedTo: 'ammoCapacity' },
@@ -835,7 +835,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_119.png',
+				imageUrl: '/cards/card_119.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -850,7 +850,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_127.png',
+				imageUrl: '/cards/card_127.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -865,7 +865,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_139.png',
+				imageUrl: '/cards/card_139.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 2, appliedTo: 'supportInventory' },
 					{ isTeamEffect: false, type: 'value', value: -0.1, appliedTo: 'damage' },
@@ -875,7 +875,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_020.png',
+				imageUrl: '/cards/card_020.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 1.5, appliedTo: 'reviveSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -885,7 +885,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_123.png',
+				imageUrl: '/cards/card_123.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'staminaRegeneration' },
 					{ isTeamEffect: true, type: 'value', value: 0.1, appliedTo: 'health' },
@@ -895,7 +895,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_074.png',
+				imageUrl: '/cards/card_074.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -910,7 +910,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_093.png',
+				imageUrl: '/cards/card_093.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -925,7 +925,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_063.png',
+				imageUrl: '/cards/card_063.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'damageResistance' },
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'health' },
@@ -942,7 +942,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_132.png',
+				imageUrl: '/cards/card_132.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -958,7 +958,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_029.png',
+				imageUrl: '/cards/card_029.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'useSpeed' },
 					{
@@ -974,7 +974,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_140.png',
+				imageUrl: '/cards/card_140.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: -0.1, appliedTo: 'health' },
 					{ isTeamEffect: true, type: 'value', value: 1, appliedTo: 'supportInventory' },
@@ -984,7 +984,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_102.png',
+				imageUrl: '/cards/card_102.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'health' },
 					{ isTeamEffect: false, type: 'value', value: -0.3, appliedTo: 'stamina' },
@@ -994,7 +994,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_108.png',
+				imageUrl: '/cards/card_108.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'traumaResistance' },
 					{
@@ -1024,7 +1024,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_088.png',
+				imageUrl: '/cards/card_088.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1039,7 +1039,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_125.png',
+				imageUrl: '/cards/card_125.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1054,7 +1054,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_131.png',
+				imageUrl: '/cards/card_131.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1069,7 +1069,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_146.png',
+				imageUrl: '/cards/card_146.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 2, appliedTo: 'extraLife' },
 					{
@@ -1085,7 +1085,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_126.png',
+				imageUrl: '/cards/card_126.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1101,7 +1101,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_116.png',
+				imageUrl: '/cards/card_116.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1116,7 +1116,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_117.png',
+				imageUrl: '/cards/card_117.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1145,7 +1145,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_113.png',
+				imageUrl: '/cards/card_113.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1160,7 +1160,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_121.png',
+				imageUrl: '/cards/card_121.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1175,7 +1175,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_021.png',
+				imageUrl: '/cards/card_021.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 2.25, appliedTo: 'reviveSpeed' },
 					{
@@ -1192,7 +1192,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_031.png',
+				imageUrl: '/cards/card_031.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'healingEfficiency' },
 					{
@@ -1208,7 +1208,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_099.png',
+				imageUrl: '/cards/card_099.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1224,7 +1224,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_156.png',
+				imageUrl: '/cards/card_156.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1239,7 +1239,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_089.png',
+				imageUrl: '/cards/card_089.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1254,7 +1254,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_043.png',
+				imageUrl: '/cards/card_043.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1275,7 +1275,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 		name: 'nest',
 		cards: [
 			{
-				imageUrl: 'card_001.png',
+				imageUrl: '/cards/card_001.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'stamina' },
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'staminaRegeneration' },
@@ -1287,21 +1287,21 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_010.png',
+				imageUrl: '/cards/card_010.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'weakspotDamage' }],
 				name: 'Ridden Slayer',
 				type: 'offense',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_016.png',
+				imageUrl: '/cards/card_016.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.25, appliedTo: 'weaponSwapSpeed' }],
 				name: 'Shooting Gloves',
 				type: 'utility',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_025.png',
+				imageUrl: '/cards/card_025.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'stamina' },
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'sprintEfficiency' },
@@ -1312,7 +1312,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_041.png',
+				imageUrl: '/cards/card_041.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1327,7 +1327,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_151.png',
+				imageUrl: '/cards/card_151.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1342,7 +1342,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_044.png',
+				imageUrl: '/cards/card_044.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'useSpeed' },
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'stamina' },
@@ -1352,7 +1352,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_070.png',
+				imageUrl: '/cards/card_070.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'staminaRegeneration' },
 					{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'health' },
@@ -1362,7 +1362,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_047.png',
+				imageUrl: '/cards/card_047.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1384,14 +1384,14 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_022.png',
+				imageUrl: '/cards/card_022.png',
 				effects: [{ isTeamEffect: false, type: 'value', value: 0.05, appliedTo: 'moveSpeed' }],
 				name: 'Dash',
 				type: 'mobility',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_032.png',
+				imageUrl: '/cards/card_032.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1413,7 +1413,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_011.png',
+				imageUrl: '/cards/card_011.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'weakspotDamage' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1423,7 +1423,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_028.png',
+				imageUrl: '/cards/card_028.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1439,7 +1439,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_023.png',
+				imageUrl: '/cards/card_023.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'moveSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1449,7 +1449,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_037.png',
+				imageUrl: '/cards/card_037.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1464,7 +1464,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_017.png',
+				imageUrl: '/cards/card_017.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'weaponSwapSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'health' },
@@ -1474,7 +1474,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_014.png',
+				imageUrl: '/cards/card_014.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'aimDownSightsSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1484,7 +1484,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_002.png',
+				imageUrl: '/cards/card_002.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'stamina' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1494,7 +1494,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_035.png',
+				imageUrl: '/cards/card_035.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1516,7 +1516,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_008.png',
+				imageUrl: '/cards/card_008.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'meleeStaminaEfficiency' },
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'meleeAttackSpeed' },
@@ -1527,7 +1527,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_040.png',
+				imageUrl: '/cards/card_040.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1542,7 +1542,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_026.png',
+				imageUrl: '/cards/card_026.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'sprintEfficiency' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1552,7 +1552,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_145.png',
+				imageUrl: '/cards/card_145.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1574,7 +1574,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_148.png',
+				imageUrl: '/cards/card_148.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1589,7 +1589,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_018.png',
+				imageUrl: '/cards/card_018.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.75, appliedTo: 'weaponSwapSpeed' },
 					{
@@ -1605,14 +1605,14 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_036.png',
+				imageUrl: '/cards/card_036.png',
 				effects: [{ isTeamEffect: true, type: 'value', value: 0.15, appliedTo: 'stamina' }],
 				name: 'Mandatory PT',
 				type: 'mobility',
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_141.png',
+				imageUrl: '/cards/card_141.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1627,7 +1627,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_105.png',
+				imageUrl: '/cards/card_105.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.6, appliedTo: 'meleeDamage' },
 					{
@@ -1650,7 +1650,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'brawn',
 			},
 			{
-				imageUrl: 'card_045.png',
+				imageUrl: '/cards/card_045.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.75, appliedTo: 'useSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.05, appliedTo: 'damageResistance' },
@@ -1660,7 +1660,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_048.png',
+				imageUrl: '/cards/card_048.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1676,7 +1676,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_009.png',
+				imageUrl: '/cards/card_009.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'meleeAttackSpeed' },
 					{ isTeamEffect: false, type: 'value', value: 0.3, appliedTo: 'meleeStaminaEfficiency' },
@@ -1700,7 +1700,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_038.png',
+				imageUrl: '/cards/card_038.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1716,7 +1716,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_027.png',
+				imageUrl: '/cards/card_027.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'sprintEfficiency' },
 					{
@@ -1732,7 +1732,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_024.png',
+				imageUrl: '/cards/card_024.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.15, appliedTo: 'moveSpeed' },
 					{
@@ -1748,7 +1748,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_051.png',
+				imageUrl: '/cards/card_051.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1764,7 +1764,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_003.png',
+				imageUrl: '/cards/card_003.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.6, appliedTo: 'stamina' },
 					{ isTeamEffect: false, type: 'value', value: -0.2, appliedTo: 'slowResistance' },
@@ -1774,7 +1774,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_049.png',
+				imageUrl: '/cards/card_049.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1790,7 +1790,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_030.png',
+				imageUrl: '/cards/card_030.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1806,7 +1806,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_046.png',
+				imageUrl: '/cards/card_046.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 1.25, appliedTo: 'useSpeed' },
 					{
@@ -1822,7 +1822,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_071.png',
+				imageUrl: '/cards/card_071.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.4, appliedTo: 'staminaRegeneration' },
 					{ isTeamEffect: false, type: 'value', value: -0.1, appliedTo: 'staminaEfficiency' },
@@ -1832,7 +1832,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_012.png',
+				imageUrl: '/cards/card_012.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.5, appliedTo: 'weakspotDamage' },
 					{ isTeamEffect: false, type: 'value', value: -0.75, appliedTo: 'aimDownSightsMoveSpeed' },
@@ -1842,7 +1842,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_097.png',
+				imageUrl: '/cards/card_097.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.1, appliedTo: 'weakspotDamage' },
 					{
@@ -1858,7 +1858,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_144.png',
+				imageUrl: '/cards/card_144.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1873,7 +1873,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'fortune',
 			},
 			{
-				imageUrl: 'card_033.png',
+				imageUrl: '/cards/card_033.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1895,7 +1895,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_072.png',
+				imageUrl: '/cards/card_072.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 1, appliedTo: 'staminaRegeneration' },
 					{ isTeamEffect: false, type: 'value', value: -0.5, appliedTo: 'maxiumStamina' },
@@ -1905,7 +1905,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'discipline',
 			},
 			{
-				imageUrl: 'card_034.png',
+				imageUrl: '/cards/card_034.png',
 				effects: [
 					{
 						isTeamEffect: false,
@@ -1927,7 +1927,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_054.png',
+				imageUrl: '/cards/card_054.png',
 				effects: [
 					{ isTeamEffect: false, type: 'value', value: 0.2, appliedTo: 'sprintSpeed' },
 					{ isTeamEffect: false, type: 'value', value: -0.3, appliedTo: 'sprintStaminaEfficiency' },
@@ -1937,7 +1937,7 @@ export const supplyLines: Readonly<SupplyLine[]> = [
 				affinity: 'reflex',
 			},
 			{
-				imageUrl: 'card_155.png',
+				imageUrl: '/cards/card_155.png',
 				effects: [
 					{
 						isTeamEffect: false,

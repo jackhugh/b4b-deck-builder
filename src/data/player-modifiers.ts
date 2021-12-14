@@ -29,6 +29,11 @@ export const playerModifiers = {
 		group: 'defense',
 		name: 'Breakout Cooldown Reduction',
 	},
+	breakoutSpeed: {
+		displayAs: 'percentage',
+		group: 'defense',
+		name: 'Breakout Speed',
+	},
 	bulletDamage: {
 		displayAs: 'percentage',
 		group: 'damage',

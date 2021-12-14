@@ -10,23 +10,9 @@ export default function CardSelection() {
 
 	return (
 		<>
-			<div className='flex w-full select-none'>
-				<span>
-					<span
-						className={clsx(
-							cardSelection.length > 15 && 'text-red-500',
-							cardSelection.length === 15 && 'text-green-500',
-							'w-6 inline-block text-right'
-						)}
-					>
-						{cardSelection.length}
-					</span>
-					<span>/15</span>
-				</span>
-				<button className='ml-auto mr-4' onClick={resetSelection}>
-					Reset
-				</button>
-			</div>
+			<button className='w-full text-right pr-4 pb-2' onClick={resetSelection}>
+				Reset
+			</button>
 			<Reorder.Group
 				axis='y'
 				values={cardSelection}
