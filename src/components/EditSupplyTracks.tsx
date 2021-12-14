@@ -6,12 +6,12 @@ import Select from 'react-select';
 import { supplyLines } from '~/data/supply-lines';
 import { useStore } from '~/store';
 
-type EditSupplyLinesProps = { closeModal: () => void };
+type EditSupplyTracksProps = { closeModal: () => void };
 
-export default function EditSupplyLines({ closeModal }: EditSupplyLinesProps) {
+export default function EditSupplyTracks({ closeModal }: EditSupplyTracksProps) {
 	return (
 		<Modal closeModal={closeModal}>
-			<div className='title text-2xl'>Supply Line Unlocks</div>
+			<div className='title text-2xl'>Supply Track Unlocks</div>
 			<p>
 				Select the next card you will <span className='font-bold'>unlock</span> for each supply track.
 			</p>
@@ -27,8 +27,8 @@ export default function EditSupplyLines({ closeModal }: EditSupplyLinesProps) {
 type SelectableSupplyTrackProps = { id: SupplyTracks };
 
 function SelectableSupplyTrack({ id }: SelectableSupplyTrackProps) {
-	const selectedCard = useStore((state) => state.unlockedSupplyLines[id]);
-	const setUnlockedSupplyLine = useStore((state) => state.setUnlockedSupplyLine);
+	const selectedCard = useStore((state) => state.unlockedSupplyTracks[id]);
+	const setUnlockedSupplyTracks = useStore((state) => state.setUnlockedSupplyTracks);
 
 	const options = useMemo(
 		() =>
@@ -48,7 +48,8 @@ function SelectableSupplyTrack({ id }: SelectableSupplyTrackProps) {
 				className='w-full text-black rounded-lg'
 				value={selectedCard ? options?.filter((elem) => elem.value === selectedCard) : undefined}
 				options={options}
-				onChange={(card) => card && setUnlockedSupplyLine(id, card.value)}
+				// mem leak here. no idea.
+				onChange={(card) => card && setUnlockedSupplyTracks(id, card.value)}
 			/>
 		</>
 	);

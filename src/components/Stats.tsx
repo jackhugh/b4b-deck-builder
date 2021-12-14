@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useStats } from '~/hooks/useStats';
@@ -13,7 +14,7 @@ export default function Stats() {
 			animate={{ scale: 1 }}
 		>
 			{stats.map((stat) => (
-				<>
+				<Fragment key={stat.name}>
 					<span
 						className={clsx(
 							stat.value < 0 && 'text-red-500',
@@ -24,7 +25,7 @@ export default function Stats() {
 						{stat.displayValue}
 					</span>
 					<span className='title text-sm flex items-center'>{stat.name}</span>
-				</>
+				</Fragment>
 			))}
 		</motion.div>
 	);

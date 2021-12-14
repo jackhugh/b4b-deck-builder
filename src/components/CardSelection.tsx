@@ -1,12 +1,14 @@
 import { useStore } from '~/store';
 import CardPreview from './CardPreview';
 import { Reorder } from 'framer-motion';
-import clsx from 'clsx';
+import { useRouter } from 'next/router';
 
 export default function CardSelection() {
 	const cardSelection = useStore((state) => state.cardSelection);
 	const reorderCards = useStore((state) => state.reorderCards);
 	const resetSelection = useStore((state) => state.resetSelection);
+
+	const router = useRouter();
 
 	return (
 		<>

@@ -99,6 +99,11 @@ export const playerModifiers = {
 		group: 'damage',
 		name: 'Offensive Inventory',
 	},
+	quickInventory: {
+		displayAs: 'number',
+		group: 'defense',
+		name: 'Quick Inventory',
+	},
 	reducedIncapacitatedTrauma: {
 		displayAs: 'percentage',
 		group: 'health',

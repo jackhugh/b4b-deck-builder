@@ -3,6 +3,7 @@ import CardSelection from '~/components/CardSelection';
 import Header from '~/components/Header';
 import Sidebar from '~/components/Sidebar';
 import Stats from '~/components/Stats';
+import { useStore } from '~/store';
 
 export default function Index() {
 	const headerHeight = '4rem';

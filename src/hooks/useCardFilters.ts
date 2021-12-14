@@ -12,7 +12,7 @@ import { supplyLines } from '~/data/supply-lines';
 export function useCardFilters() {
 	const filters = useStore((state) => state.filters);
 	const cardSelection = useStore((state) => state.cardSelection);
-	const unlockedSupplyLines = useStore((state) => state.unlockedSupplyLines);
+	const unlockedSupplyTracks = useStore((state) => state.unlockedSupplyTracks);
 
 	const cards = useMemo(
 		() => [
@@ -20,16 +20,16 @@ export function useCardFilters() {
 			...supplyLines
 				.map((supplyLine, i) => {
 					if (!filters.unlockedCards) return supplyLine.cards;
-					if (!unlockedSupplyLines[supplyLine.name]) return supplyLine.cards;
+					if (!unlockedSupplyTracks[supplyLine.name]) return supplyLine.cards;
 
 					const index = supplyLines[i].cards.findIndex(
-						(card) => card.imageUrl === unlockedSupplyLines[supplyLine.name]?.imageUrl
+						(card) => card.imageUrl === unlockedSupplyTracks[supplyLine.name]?.imageUrl
 					);
 					return supplyLine.cards.filter((card, i) => i <= index - 1);
 				})
 				.flat(),
 		],
-		[unlockedSupplyLines, filters.unlockedCards]
+		[unlockedSupplyTracks, filters.unlockedCards]
 	);
 
 	return useMemo(
@@ -83,6 +83,6 @@ export function useCardFilters() {
 				return true;
 			}),
 
-		[filters, cardSelection, unlockedSupplyLines]
+		[filters, cardSelection, unlockedSupplyTracks]
 	);
 }

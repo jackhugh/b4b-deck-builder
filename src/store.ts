@@ -1,11 +1,12 @@
 import create from 'zustand';
+import { cleaners } from './data/cleaners';
 import { CardAffinities, CardInterface, CardTypes, CleanerInterface, Modifiers, SupplyTracks } from './data/types';
 
 interface StoreInterface {
 	cardSelection: CardInterface[];
 	cleaner: CleanerInterface | null;
 	// TODO - maybe just use the supply-lines file to store supply track info
-	unlockedSupplyLines: Partial<Record<SupplyTracks, CardInterface>>;
+	unlockedSupplyTracks: Partial<Record<SupplyTracks, CardInterface>>;
 	filters: {
 		text: string;
 		type: CardTypes[];
@@ -13,9 +14,10 @@ interface StoreInterface {
 		teamEffects: boolean;
 		modifiers: Modifiers[];
 		unlockedCards: boolean;
+		supplyTrack: SupplyTracks | null;
 	};
 	setCleaner: (cleaner: CleanerInterface) => void;
-	setUnlockedSupplyLine: (supplyLine: SupplyTracks, card: CardInterface) => void;
+	setUnlockedSupplyTracks: (supplyLine: SupplyTracks, card: CardInterface) => void;
 	resetFilters: () => void;
 	setFilters: (setFilters: (filters: StoreInterface['filters']) => Partial<StoreInterface['filters']>) => void;
 	resetSelection: () => void;
@@ -25,8 +27,8 @@ interface StoreInterface {
 
 export const useStore = create<StoreInterface>((set) => ({
 	cardSelection: [],
-	cleaner: null,
-	unlockedSupplyLines: {},
+	cleaner: cleaners[0],
+	unlockedSupplyTracks: {},
 	filters: {
 		text: '',
 		type: [],
@@ -34,14 +36,23 @@ export const useStore = create<StoreInterface>((set) => ({
 		teamEffects: false,
 		modifiers: [],
 		unlockedCards: false,
+		supplyTrack: null,
 	},
 	setCleaner: (cleaner) => set(() => ({ cleaner })),
-	setUnlockedSupplyLine: (supplyLine, card) =>
-		set((state) => ({ unlockedSupplyLines: { ...state.unlockedSupplyLines, [supplyLine]: card } })),
+	setUnlockedSupplyTracks: (supplyLine, card) =>
+		set((state) => ({ unlockedSupplyTracks: { ...state.unlockedSupplyTracks, [supplyLine]: card } })),
 	resetSelection: () => set(() => ({ cardSelection: [] })),
 	resetFilters: () =>
 		set(() => ({
-			filters: { text: '', type: [], affinity: [], teamEffects: false, modifiers: [], unlockedCards: false },
+			filters: {
+				text: '',
+				type: [],
+				affinity: [],
+				teamEffects: false,
+				modifiers: [],
+				unlockedCards: false,
+				supplyTrack: null,
+			},
 		})),
 	setFilters: (fn) => set((state) => ({ filters: { ...state.filters, ...fn(state.filters) } })),
 	toggleCard: (card) =>

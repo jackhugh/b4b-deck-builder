@@ -1,11 +1,12 @@
 import clsx from 'clsx';
-import { cardAffinities, cardTypes } from '~/data/types';
+import { cardAffinities, cardTypes, supplyTracks } from '~/data/types';
 import { useStore } from '~/store';
 import { objectKeys, setInArray } from '~/util';
 import Select from 'react-select';
 import { playerModifiers } from '~/data/player-modifiers';
 import { useEffect, useState } from 'react';
-import EditSupplyLines from './EditSupplyLines';
+import EditSupplyTracks from './EditSupplyTracks';
+import { supplyLines } from '~/data/supply-lines';
 
 // TODO - clean up and move elsewhere
 const effectsDropdownOptions = [
@@ -25,17 +26,17 @@ objectKeys(playerModifiers).forEach((modifier) =>
 
 export function CardFilter() {
 	const filters = useStore((state) => state.filters);
-	const unlockedSupplyLines = useStore((state) => state.unlockedSupplyLines);
+	const unlockedSupplyTracks = useStore((state) => state.unlockedSupplyTracks);
 	const setFilters = useStore((state) => state.setFilters);
 	const resetFilters = useStore((state) => state.resetFilters);
 
-	const [editSupplyLines, setEditSupplyLines] = useState(false);
+	const [editSupplyTracksModal, setEditSupplyTracksModal] = useState(false);
 
 	useEffect(() => {
-		if (objectKeys(unlockedSupplyLines).length) {
+		if (objectKeys(unlockedSupplyTracks).length) {
 			setFilters(() => ({ unlockedCards: true }));
 		}
-	}, [unlockedSupplyLines]);
+	}, [unlockedSupplyTracks]);
 
 	return (
 		<div className='flex flex-col items-start gap-4'>
@@ -92,13 +93,13 @@ export function CardFilter() {
 					name='Unlocked Only'
 					className='title'
 					isChecked={filters.unlockedCards}
-					disabled={!Object.keys(unlockedSupplyLines).length}
+					disabled={!Object.keys(unlockedSupplyTracks).length}
 					onChange={(isChecked) => setFilters(() => ({ unlockedCards: isChecked }))}
 				/>
-				<button className='ml-auto' onClick={() => setEditSupplyLines(true)}>
+				<button className='ml-auto' onClick={() => setEditSupplyTracksModal(true)}>
 					Edit
 				</button>
-				{editSupplyLines && <EditSupplyLines closeModal={() => setEditSupplyLines(false)} />}
+				{editSupplyTracksModal && <EditSupplyTracks closeModal={() => setEditSupplyTracksModal(false)} />}
 			</div>
 
 			<FilterSection name='Effects'>
@@ -106,6 +107,7 @@ export function CardFilter() {
 					instanceId='effects'
 					className='w-full text-black rounded-lg'
 					isMulti
+					isClearable
 					options={effectsDropdownOptions}
 					value={effectsDropdownOptions
 						.flatMap((elem) => elem.options)
@@ -116,20 +118,18 @@ export function CardFilter() {
 				/>
 			</FilterSection>
 
-			{/* <FilterSection name='Supply Line'>
+			<FilterSection name='Supply Track'>
 				<Select
-					instanceId='supply-line'
+					instanceId='supply-track'
 					className='w-full text-black rounded-lg'
 					isClearable
 					isSearchable={false}
-					options={[
-						{ label: 'The Strip', value: 0 },
-						{ label: "Paul's Alley", value: 1 },
-						{ label: 'The Clinic', value: 2 },
-						{ label: "The Crow's Nest", value: 3 },
-					]}
+					options={supplyLines.map((supplyLine) => ({
+						label: supplyTracks[supplyLine.name].name,
+						value: supplyLine.name,
+					}))}
 				/>
-			</FilterSection> */}
+			</FilterSection>
 		</div>
 	);
 }

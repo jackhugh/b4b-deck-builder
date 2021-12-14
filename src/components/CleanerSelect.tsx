@@ -1,5 +1,5 @@
 import { cleaners } from '~/data/cleaners';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { useStore } from '~/store';
 import { useMemo, useState } from 'react';
 
@@ -31,7 +31,7 @@ export default function CleanerSelect() {
 				{/* dummy image for sizing */}
 				<img src={cleaners[0].imageUrl} className='w-full block invisible' />
 
-				<AnimatePresence custom={direction}>
+				<AnimatePresence initial={false} custom={direction}>
 					{cleaner && (
 						<motion.div
 							className='w-full absolute inset-0'
@@ -72,7 +72,7 @@ export default function CleanerSelect() {
 	);
 }
 
-const variants = {
+export const variants: Variants = {
 	center: {
 		x: 0,
 		opacity: 1,

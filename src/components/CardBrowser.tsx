@@ -9,7 +9,7 @@ export default function CardBrowser() {
 
 	return (
 		<div className='flex items-start gap-4'>
-			<div className='flex flex-col gap-4 w-[20rem] sticky top-[5rem]'>
+			<div className='flex flex-col gap-4 w-[20rem] 1sticky 1top-[5rem]'>
 				<CleanerSelect />
 				<CardFilter />
 			</div>
