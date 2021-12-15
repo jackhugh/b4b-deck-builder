@@ -2,6 +2,7 @@ import { cleaners } from '~/data/cleaners';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { useStore } from '~/store';
 import { useMemo, useState } from 'react';
+import clsx from 'clsx';
 
 const cleanersSorted = [...cleaners].sort();
 
@@ -28,7 +29,7 @@ export default function CleanerSelect() {
 			<span className='title text-xl'>Cleaners</span>
 
 			<div className='w-full relative overflow-hidden'>
-				{/* dummy image for sizing */}
+				{/* dummy image for sizing. this is probably not a good idea...*/}
 				<img src={cleaners[0].imageUrl} className='w-full block invisible' />
 
 				<AnimatePresence initial={false} custom={direction}>
@@ -53,22 +54,26 @@ export default function CleanerSelect() {
 
 				<div className='absolute inset-0 flex items-center z-20 select-none'>
 					{cleanerIndex > 0 && (
-						<button
-							className='text-3xl font-bold absolute left-0 p-2 h-full'
-							children='<'
-							onClick={() => changeCleaner(-1)}
-						/>
+						<CleanerButton name='<' onClick={() => changeCleaner(-1)} className='left-0' />
 					)}
 					{cleanerIndex < cleanersSorted.length - 1 && (
-						<button
-							className='text-3xl font-bold absolute right-0 p-2 h-full'
-							children='>'
-							onClick={() => changeCleaner(1)}
-						/>
+						<CleanerButton name='>' onClick={() => changeCleaner(1)} className='right-0' />
 					)}
 				</div>
 			</div>
 		</div>
+	);
+}
+
+type CleanerButtonProps = { name: string; onClick: () => void; className?: string };
+
+function CleanerButton({ name, onClick, className }: CleanerButtonProps) {
+	return (
+		<button
+			className={clsx('text-3xl font-bold absolute right-0 p-2 h-full', className)}
+			children={name}
+			onClick={onClick}
+		/>
 	);
 }
 

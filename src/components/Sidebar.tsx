@@ -8,7 +8,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	return (
-		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10 bg-gradient-to-r to-brand/5 from-black'>
+		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10 to-brand/5 from-black-5'>
 			<div className='flex justify-evenly sticky top-0 z-10 bg-black-5 rounded-tl-xl'>
 				{tabs.map((tab, i) => (
 					<SidebarTab

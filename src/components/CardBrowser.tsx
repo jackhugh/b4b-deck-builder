@@ -8,7 +8,7 @@ export default function CardBrowser() {
 	const cards = useCardFilters();
 
 	return (
-		<div className='flex items-start gap-4'>
+		<div className='flex items-start gap-8'>
 			<div className='flex flex-col gap-4 w-[20rem] 1sticky 1top-[5rem]'>
 				<CleanerSelect />
 				<CardFilter />

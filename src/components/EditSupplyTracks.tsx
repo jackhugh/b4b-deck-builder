@@ -13,7 +13,7 @@ export default function EditSupplyTracks({ closeModal }: EditSupplyTracksProps) 
 		<Modal closeModal={closeModal}>
 			<div className='title text-2xl'>Supply Track Unlocks</div>
 			<p>
-				Select the next card you will <span className='font-bold'>unlock</span> for each supply track.
+				Select the next card you will <span className='font-bold'>unlock</span> in each supply track.
 			</p>
 			{objectKeys(supplyTracks)
 				.filter((key) => supplyTracks[key].isUnlockable)
@@ -71,7 +71,7 @@ export function Modal({ closeModal, children }: ModalProps) {
 				initial={{ scale: 0.8 }}
 				animate={{ scale: 1 }}
 				transition={{ duration: 0.2 }}
-				className='flex flex-col items-start gap-4 p-6 bg-black-10 rounded-xl border-2 border-black-40'
+				className='flex flex-col items-start gap-4 p-6 bg-black-5 rounded-xl border-2 border-white/10'
 				onClick={(e) => e.stopPropagation()}
 			>
 				{children}

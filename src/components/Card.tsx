@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useStore } from '~/store';
 import clsx from 'clsx';
 import { CardInterface } from '~/data/types';
-import Image from 'next/image';
 
 type CardProps = { card: CardInterface };
 
@@ -17,6 +16,7 @@ export default React.memo(function Card({ card }: CardProps) {
 		<motion.div
 			onViewportEnter={() => setShowCard(true)}
 			onViewportLeave={() => setShowCard(false)}
+			// REVIEW
 			style={{ height: 367, width: 240 }}
 		>
 			{showCard && (

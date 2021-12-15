@@ -11,6 +11,10 @@ module.exports = {
 			},
 			colors: {
 				brand: '#fe0000',
+				header: {
+					1: '#0a0505',
+					2: '#1d0404',
+				},
 				black: {
 					DEFAULT: '#000',
 					['1']: 'rgb(1, 1, 1)',
