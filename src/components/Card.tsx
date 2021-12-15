@@ -14,8 +14,9 @@ export default React.memo(function Card({ card }: CardProps) {
 
 	return (
 		<motion.div
-			// onViewportEnter={() => setShowCard(true)}
-			// onViewportLeave={() => setShowCard(false)}
+			// REVIEW - performance impact.
+			onViewportEnter={() => setShowCard(true)}
+			onViewportLeave={() => setShowCard(false)}
 			// REVIEW
 			style={{ height: 367, width: 240 }}
 		>

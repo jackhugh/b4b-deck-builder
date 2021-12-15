@@ -83,7 +83,7 @@ export const variants: Variants = {
 		opacity: 1,
 	},
 	enter: (dir: number) => ({
-		x: dir > 0 ? '100%' : dir < 0 ? '100%' : '0%',
+		x: dir > 0 ? '100%' : dir < 0 ? '-100%' : '0%',
 		opacity: dir !== 0 ? 0 : 1,
 	}),
 	exit: (dir: number) => ({
