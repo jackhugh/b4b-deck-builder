@@ -10,12 +10,12 @@ type CardProps = { card: CardInterface };
 export default React.memo(function Card({ card }: CardProps) {
 	const toggleCard = useStore((state) => state.toggleCard);
 
-	const [showCard, setShowCard] = useState(false);
+	const [showCard, setShowCard] = useState(true);
 
 	return (
 		<motion.div
-			onViewportEnter={() => setShowCard(true)}
-			onViewportLeave={() => setShowCard(false)}
+			// onViewportEnter={() => setShowCard(true)}
+			// onViewportLeave={() => setShowCard(false)}
 			// REVIEW
 			style={{ height: 367, width: 240 }}
 		>

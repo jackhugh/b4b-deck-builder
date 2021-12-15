@@ -35,11 +35,11 @@ export default function Index() {
 						tabs={[
 							{
 								name: 'Cards',
-								component: <CardSelection />,
+								component: () => <CardSelection />,
 							},
 							{
 								name: 'Stats',
-								component: <Stats />,
+								component: () => <Stats />,
 							},
 						]}
 					/>

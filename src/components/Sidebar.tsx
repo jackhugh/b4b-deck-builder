@@ -3,15 +3,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { variants } from './CleanerSelect';
 
-type SidebarProps = { tabs: { name: string; component: React.ReactNode }[] };
+type SidebarProps = { tabs: { name: string; component: () => React.ReactNode }[] };
 
 export default function Sidebar({ tabs }: SidebarProps) {
 	const [[activeTab, prevTab], setTabs] = useState([0, 0]);
 	const direction = activeTab - prevTab;
 
 	return (
-		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10 to-brand/5 from-black-5'>
-			<div className='flex justify-evenly sticky top-0 z-10 bg-black-5 rounded-tl-xl'>
+		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10'>
+			<div className='flex justify-evenly sticky top-0 z-10 select-none'>
 				{tabs.map((tab, i) => (
 					<SidebarTab
 						key={i}
@@ -22,11 +22,11 @@ export default function Sidebar({ tabs }: SidebarProps) {
 				))}
 			</div>
 			<div className='relative flex-1 overflow-x-hidden'>
-				<AnimatePresence initial={false} custom={direction}>
+				<AnimatePresence custom={direction}>
 					<motion.div
 						key={activeTab}
 						layoutScroll
-						className='px-4 py-2 overflow-y-auto absolute inset-0 w-full'
+						className='px-4 py-2 overflow-y-auto absolute inset-0 w-full h-full'
 						variants={variants}
 						custom={direction}
 						initial='enter'
@@ -37,7 +37,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 							opacity: { duration: 0.2 },
 						}}
 					>
-						{tabs[activeTab].component}
+						{tabs[activeTab].component()}
 					</motion.div>
 				</AnimatePresence>
 			</div>

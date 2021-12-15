@@ -16,6 +16,8 @@ export default function Test() {
 	const glowX = useTransform(mouseX, [0, width], [width, 0]);
 	const glowBrightness = useTransform(rotateX, [-tilt, tilt], [maxGlowBrightness, 0]);
 
+	const cardBrightness = useTransform(rotateX, [-tilt, tilt], [0, 0.5]);
+
 	const [isHovered, setIsHovered] = useState(false);
 
 	const onMouseMove: React.MouseEventHandler<HTMLImageElement> = (e) => {
@@ -38,6 +40,10 @@ export default function Test() {
 				}}
 			>
 				<img src='/cards/card_001.png' className='block rounded-lg' />
+				<motion.div
+					className='w-full h-full absolute inset-0 bg-black rounded-lg'
+					style={{ opacity: cardBrightness }}
+				></motion.div>
 				<div className='w-full h-full absolute inset-0 pointer-events-none'>
 					<motion.div
 						style={{

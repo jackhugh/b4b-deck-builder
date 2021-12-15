@@ -7,17 +7,17 @@ import clsx from 'clsx';
 type CardPreviewProps = { card: CardInterface; number: number };
 
 export default function CardPreview({ card, number }: CardPreviewProps) {
-	const toggleCard = useStore((state) => state.toggleCard);
+	// const toggleCard = useStore((state) => state.toggleCard);
 	// const [showPreview, setShowPreview] = useState(true);
 
 	return (
 		<Reorder.Item value={card} className='select-none w-full h-16'>
 			<motion.button
 				className='flex gap-2 w-full h-full'
-				initial={{ scale: 0.8 }}
-				animate={{ scale: 1 }}
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 1 }}
+				initial={{ scale: 0.8 }}
+				animate={{ scale: 1 }}
 				// onClick={() => toggleCard(card)}
 				// onHoverStart={() => setShowPreview(true)}
 				// onHoverEnd={() => setShowPreview(false)}

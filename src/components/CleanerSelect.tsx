@@ -28,7 +28,7 @@ export default function CleanerSelect() {
 		<div className='flex flex-col gap-2'>
 			<span className='title text-xl'>Cleaners</span>
 
-			<div className='w-full relative overflow-hidden'>
+			<div className='w-full relative overflow-hidden select-none'>
 				{/* dummy image for sizing. this is probably not a good idea...*/}
 				<img src={cleaners[0].imageUrl} className='w-full block invisible' />
 
@@ -52,7 +52,7 @@ export default function CleanerSelect() {
 					)}
 				</AnimatePresence>
 
-				<div className='absolute inset-0 flex items-center z-20 select-none'>
+				<div className='absolute inset-0 flex items-center z-10 select-none'>
 					{cleanerIndex > 0 && (
 						<CleanerButton name='<' onClick={() => changeCleaner(-1)} className='left-0' />
 					)}
@@ -83,11 +83,11 @@ export const variants: Variants = {
 		opacity: 1,
 	},
 	enter: (dir: number) => ({
-		x: dir > 0 ? '100%' : '-100%',
-		opacity: 0,
+		x: dir > 0 ? '100%' : dir < 0 ? '100%' : '0%',
+		opacity: dir !== 0 ? 0 : 1,
 	}),
 	exit: (dir: number) => ({
-		x: dir < 0 ? '100%' : '-100%',
-		opacity: 0,
+		x: dir < 0 ? '100%' : dir > 0 ? '-100%' : '0%',
+		opacity: dir !== 0 ? 0 : 1,
 	}),
 };
