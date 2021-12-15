@@ -12,7 +12,7 @@ export default function CardSelection() {
 
 	return (
 		<>
-			<button className='w-full text-right pr-4 pb-2' onClick={resetSelection}>
+			<button className='w-full text-right pr-4 pb-2 block' onClick={resetSelection}>
 				Reset
 			</button>
 			<Reorder.Group

@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { variants } from './CleanerSelect';
 
-type SidebarProps = { tabs: { name: string; renderFunction: () => React.ReactNode }[] };
+type SidebarProps = { tabs: { name: string; component: React.ReactNode }[] };
 
 export default function Sidebar({ tabs }: SidebarProps) {
-	const [activeTab, setActiveTab] = useState(0);
+	const [[activeTab, prevTab], setTabs] = useState([0, 0]);
+	const direction = activeTab - prevTab;
 
 	return (
 		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10 to-brand/5 from-black-5'>
@@ -14,14 +16,31 @@ export default function Sidebar({ tabs }: SidebarProps) {
 					<SidebarTab
 						key={i}
 						name={tab.name}
-						setActiveTab={() => setActiveTab(i)}
+						setActiveTab={() => setTabs((prev) => [i, prev[0]])}
 						isActive={activeTab === i}
 					/>
 				))}
 			</div>
-			<motion.div key={activeTab} layoutScroll className='px-4 py-2 h-full overflow-y-auto'>
-				{tabs[activeTab].renderFunction()}
-			</motion.div>
+			<div className='relative flex-1 overflow-x-hidden'>
+				<AnimatePresence initial={false} custom={direction}>
+					<motion.div
+						key={activeTab}
+						layoutScroll
+						className='px-4 py-2 overflow-y-auto absolute inset-0 w-full'
+						variants={variants}
+						custom={direction}
+						initial='enter'
+						animate='center'
+						exit='exit'
+						transition={{
+							x: { type: 'spring', stiffness: 300, damping: 30 },
+							opacity: { duration: 0.2 },
+						}}
+					>
+						{tabs[activeTab].component}
+					</motion.div>
+				</AnimatePresence>
+			</div>
 		</aside>
 	);
 }
