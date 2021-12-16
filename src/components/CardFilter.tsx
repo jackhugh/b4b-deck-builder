@@ -88,7 +88,7 @@ export function CardFilter() {
 				onChange={(isChecked) => setFilters(() => ({ teamEffects: isChecked }))}
 			/>
 
-			<div className='flex w-full'>
+			<div className='flex w-full items-baseline'>
 				<CheckboxLabel
 					name='Unlocked Only'
 					className='title'
@@ -96,7 +96,7 @@ export function CardFilter() {
 					disabled={!Object.keys(unlockedSupplyTracks).length}
 					onChange={(isChecked) => setFilters(() => ({ unlockedCards: isChecked }))}
 				/>
-				<button className='ml-auto' onClick={() => setEditSupplyTracksModal(true)}>
+				<button className='ml-auto text-sm' onClick={() => setEditSupplyTracksModal(true)}>
 					Edit
 				</button>
 				{editSupplyTracksModal && <EditSupplyTracks closeModal={() => setEditSupplyTracksModal(false)} />}

@@ -6,7 +6,6 @@ import { CardInterface } from '~/data/types';
 
 type CardProps = { card: CardInterface };
 
-// NOTE - react.memo causes issues with motion layout prop
 export default React.memo(function Card({ card }: CardProps) {
 	const toggleCard = useStore((state) => state.toggleCard);
 

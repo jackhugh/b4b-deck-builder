@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { variants } from './CleanerSelect';
+import { transition, variants } from './CleanerSelect';
 
 type SidebarProps = { tabs: { name: string; component: () => React.ReactNode }[] };
 
@@ -11,7 +11,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 
 	return (
 		<aside className='rounded-l-xl h-full flex flex-col border-2 border-white/10'>
-			<div className='flex justify-evenly sticky top-0 z-10 select-none'>
+			<div className='flex justify-evenly sticky top-0 z-10 select-none shadow-lg shadow-black/50'>
 				{tabs.map((tab, i) => (
 					<SidebarTab
 						key={i}
@@ -29,13 +29,10 @@ export default function Sidebar({ tabs }: SidebarProps) {
 						className='px-4 py-2 overflow-y-auto absolute inset-0 w-full h-full'
 						variants={variants}
 						custom={direction}
+						transition={transition}
 						initial='enter'
 						animate='center'
 						exit='exit'
-						transition={{
-							x: { type: 'spring', stiffness: 300, damping: 30 },
-							opacity: { duration: 0.2 },
-						}}
 					>
 						{tabs[activeTab].component()}
 					</motion.div>

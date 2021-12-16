@@ -35,17 +35,14 @@ export default function CleanerSelect() {
 				<AnimatePresence initial={false} custom={direction}>
 					{cleaner && (
 						<motion.div
-							className='w-full absolute inset-0'
+							className='absolute inset-0'
 							key={cleaner.imageUrl}
 							variants={variants}
 							custom={direction}
 							initial='enter'
 							animate='center'
 							exit='exit'
-							transition={{
-								x: { type: 'spring', stiffness: 300, damping: 30 },
-								opacity: { duration: 0.2 },
-							}}
+							transition={transition}
 						>
 							<img className='w-full block' src={cleaner.imageUrl} alt={cleaner.name} />
 						</motion.div>
@@ -90,4 +87,9 @@ export const variants: Variants = {
 		x: dir < 0 ? '100%' : dir > 0 ? '-100%' : '0%',
 		opacity: dir !== 0 ? 0 : 1,
 	}),
+};
+
+export const transition = {
+	x: { type: 'spring', stiffness: 300, damping: 30 },
+	opacity: { duration: 0.2 },
 };
