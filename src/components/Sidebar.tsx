@@ -2,8 +2,9 @@ import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { transition, variants } from './CleanerSelect';
+import SaveDeck from './SaveDeck';
 
-type SidebarProps = { tabs: { name: string; component: () => React.ReactNode }[] };
+type SidebarProps = { tabs: { name: string; component: React.ReactNode }[] };
 
 export default function Sidebar({ tabs }: SidebarProps) {
 	const [[activeTab, prevTab], setTabs] = useState([0, 0]);
@@ -21,6 +22,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 					/>
 				))}
 			</div>
+
 			<div className='relative flex-1 overflow-x-hidden'>
 				<AnimatePresence custom={direction}>
 					<motion.div
@@ -34,10 +36,12 @@ export default function Sidebar({ tabs }: SidebarProps) {
 						animate='center'
 						exit='exit'
 					>
-						{tabs[activeTab].component()}
+						{tabs[activeTab].component}
 					</motion.div>
 				</AnimatePresence>
 			</div>
+
+			<SaveDeck />
 		</aside>
 	);
 }

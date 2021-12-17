@@ -10,7 +10,7 @@ export default function Index() {
 
 	return (
 		<div className='relative'>
-			<div className='sticky top-0 z-10' style={{ height: headerHeight }}>
+			<div className='sticky top-0 z-20' style={{ height: headerHeight }}>
 				<Header />
 			</div>
 
@@ -35,11 +35,11 @@ export default function Index() {
 						tabs={[
 							{
 								name: 'Cards',
-								component: () => <CardSelection />,
+								component: <CardSelection />,
 							},
 							{
 								name: 'Stats',
-								component: () => <Stats />,
+								component: <Stats />,
 							},
 						]}
 					/>

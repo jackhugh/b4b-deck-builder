@@ -10,8 +10,8 @@ export default function Test() {
 	const mouseX = useMotionValue(0);
 	const mouseY = useMotionValue(0);
 
-	const rotateY = useTransform(mouseX, [0, width], [tilt, -tilt]);
-	const rotateX = useTransform(mouseY, [0, height], [-tilt, tilt]);
+	const rotateY = useTransform(mouseX, [0, width], [-tilt, tilt]);
+	const rotateX = useTransform(mouseY, [0, height], [tilt, -tilt]);
 
 	const glowX = useTransform(mouseX, [0, width], [width, 0]);
 	const glowBrightness = useTransform(rotateX, [-tilt, tilt], [maxGlowBrightness, 0]);
@@ -30,17 +30,20 @@ export default function Test() {
 		<div className='h-screen flex items-center justify-center bg-white'>
 			<motion.div
 				className='relative'
-				whileHover={{ scale: 1.1 }}
+				// whileHover={{ scale: 1.1 }}
 				onMouseMove={onMouseMove}
 				onHoverStart={() => setIsHovered(true)}
 				onHoverEnd={() => setIsHovered(false)}
 				style={{
-					rotateX: isHovered ? rotateX : 0,
-					rotateY: isHovered ? rotateY : 0,
+					// rotateX: isHovered ? rotateX : 0,
+					// rotateY: isHovered ? rotateY : 0,
+					rotateX,
+					rotateY,
+					transformPerspective: 500,
 				}}
 			>
 				<img src='/cards/card_001.png' className='block rounded-lg' />
-				<motion.div
+				{/* <motion.div
 					className='w-full h-full absolute inset-0 bg-black rounded-lg'
 					style={{ opacity: cardBrightness }}
 				></motion.div>
@@ -55,7 +58,7 @@ export default function Test() {
 							height: 0,
 						}}
 					/>
-				</div>
+				</div> */}
 			</motion.div>
 		</div>
 	);

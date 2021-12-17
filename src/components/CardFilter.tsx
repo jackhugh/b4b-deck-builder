@@ -5,7 +5,7 @@ import { objectKeys, setInArray } from '~/util';
 import Select from 'react-select';
 import { playerModifiers } from '~/data/player-modifiers';
 import { useEffect, useState } from 'react';
-import EditSupplyTracks from './EditSupplyTracks';
+import EditSupplyTracksModal from './EditSupplyTracks';
 import { supplyLines } from '~/data/supply-lines';
 
 // TODO - clean up and move elsewhere
@@ -99,7 +99,10 @@ export function CardFilter() {
 				<button className='ml-auto text-sm' onClick={() => setEditSupplyTracksModal(true)}>
 					Edit
 				</button>
-				{editSupplyTracksModal && <EditSupplyTracks closeModal={() => setEditSupplyTracksModal(false)} />}
+				<EditSupplyTracksModal
+					isOpen={editSupplyTracksModal}
+					closeModal={() => setEditSupplyTracksModal(false)}
+				/>
 			</div>
 
 			<FilterSection name='Effects'>

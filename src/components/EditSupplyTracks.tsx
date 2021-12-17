@@ -1,17 +1,16 @@
-import { motion } from 'framer-motion';
 import React, { useMemo } from 'react';
 import { SupplyTracks, supplyTracks } from '~/data/types';
 import { objectKeys } from '~/util';
 import Select from 'react-select';
 import { supplyLines } from '~/data/supply-lines';
 import { useStore } from '~/store';
+import Modal from './Modal';
 
-type EditSupplyTracksProps = { closeModal: () => void };
+type EditSupplyTracksModalProps = { closeModal: () => void; isOpen: boolean };
 
-export default function EditSupplyTracks({ closeModal }: EditSupplyTracksProps) {
+export default function EditSupplyTracksModal({ closeModal, isOpen }: EditSupplyTracksModalProps) {
 	return (
-		<Modal closeModal={closeModal}>
-			<div className='title text-2xl'>Supply Track Unlocks</div>
+		<Modal title='Supply Track Unlocks' isOpen={isOpen} closeModal={closeModal}>
 			<p>
 				Select the next card you will <span className='font-bold'>unlock</span> in each supply track.
 			</p>
@@ -52,34 +51,5 @@ function SelectableSupplyTrack({ id }: SelectableSupplyTrackProps) {
 				onChange={(card) => card && setUnlockedSupplyTracks(id, card.value)}
 			/>
 		</>
-	);
-}
-
-type ModalProps = { closeModal: () => void; children: React.ReactNode };
-
-export function Modal({ closeModal, children }: ModalProps) {
-	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			transition={{ duration: 0.2 }}
-			className='fixed inset-0 bg-black/50 backdrop-blur z-50 flex flex-col items-center justify-center'
-			onClick={closeModal}
-		>
-			<div className='flex-1' />
-			<motion.div
-				initial={{ scale: 0.8 }}
-				animate={{ scale: 1 }}
-				transition={{ duration: 0.2 }}
-				className='flex flex-col items-start gap-4 p-6 bg-black-5 rounded-xl border-2 border-white/10'
-				onClick={(e) => e.stopPropagation()}
-			>
-				{children}
-				<button className='self-end' onClick={closeModal}>
-					close
-				</button>
-			</motion.div>
-			<div className='flex-[2]' />
-		</motion.div>
 	);
 }
