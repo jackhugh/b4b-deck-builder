@@ -1,6 +1,13 @@
 export default function Header() {
 	return (
 		<header className='h-full flex items-center px-20 bg-gradient-to-r from-header-1 to-header-2/70 backdrop-blur backdrop-saturate-150 border-b-2 border-white/10'>
+			<div
+				className='absolute inset-0 opacity-[.15]'
+				style={{
+					backgroundImage: 'url(https://grainy-gradients.vercel.app/noise.svg)',
+					backgroundSize: '300px',
+				}}
+			/>
 			<span className='text-3xl title select-none'>
 				<span className='text-brand'>B4B</span> Deck Builder
 			</span>
