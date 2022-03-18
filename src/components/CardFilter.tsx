@@ -1,12 +1,12 @@
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
+import Select from 'react-select';
+import { playerModifiers } from '~/data/player-modifiers';
+import { supplyLines } from '~/data/supply-lines';
 import { cardAffinities, cardTypes, supplyTracks } from '~/data/types';
 import { useStore } from '~/store';
 import { objectKeys, setInArray } from '~/util';
-import Select from 'react-select';
-import { playerModifiers } from '~/data/player-modifiers';
-import { useEffect, useState } from 'react';
 import EditSupplyTracksModal from './EditSupplyTracks';
-import { supplyLines } from '~/data/supply-lines';
 
 // TODO - clean up and move elsewhere
 const effectsDropdownOptions = [

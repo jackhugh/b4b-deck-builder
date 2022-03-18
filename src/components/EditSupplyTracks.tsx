@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
-import { SupplyTracks, supplyTracks } from '~/data/types';
-import { objectKeys } from '~/util';
 import Select from 'react-select';
 import { supplyLines } from '~/data/supply-lines';
+import { SupplyTracks, supplyTracks } from '~/data/types';
 import { useStore } from '~/store';
+import { objectKeys } from '~/util';
 import Modal from './Modal';
 
 type EditSupplyTracksModalProps = { closeModal: () => void; isOpen: boolean };
@@ -12,7 +12,7 @@ export default function EditSupplyTracksModal({ closeModal, isOpen }: EditSupply
 	return (
 		<Modal title='Supply Track Unlocks' isOpen={isOpen} closeModal={closeModal}>
 			<p>
-				Select the next card you will <span className='font-bold'>unlock</span> in each supply track.
+				Select the next card you <span className='font-bold'>will unlock</span> in each supply track.
 			</p>
 			{objectKeys(supplyTracks)
 				.filter((key) => supplyTracks[key].isUnlockable)
@@ -49,6 +49,7 @@ function SelectableSupplyTrack({ id }: SelectableSupplyTrackProps) {
 				options={options}
 				// mem leak here. no idea.
 				onChange={(card) => card && setUnlockedSupplyTracks(id, card.value)}
+				isClearable
 			/>
 		</>
 	);

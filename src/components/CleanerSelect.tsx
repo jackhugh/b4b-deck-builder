@@ -1,8 +1,8 @@
-import { cleaners } from '~/data/cleaners';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { useStore } from '~/store';
-import { useMemo, useState } from 'react';
 import clsx from 'clsx';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
+import { useMemo, useState } from 'react';
+import { cleaners } from '~/data/cleaners';
+import { useStore } from '~/store';
 
 const cleanersSorted = [...cleaners].sort();
 
@@ -67,7 +67,7 @@ type CleanerButtonProps = { name: string; onClick: () => void; className?: strin
 function CleanerButton({ name, onClick, className }: CleanerButtonProps) {
 	return (
 		<button
-			className={clsx('text-3xl font-bold absolute right-0 p-2 h-full', className)}
+			className={clsx('text-3xl font-bold absolute p-2 h-full', className)}
 			children={name}
 			onClick={onClick}
 		/>

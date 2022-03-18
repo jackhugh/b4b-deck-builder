@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useStore } from '~/store';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { CardInterface } from '~/data/types';
+import { useStore } from '~/store';
 
 type CardProps = { card: CardInterface };
 

@@ -1,4 +1,3 @@
-import { AnimatePresence, LayoutGroup } from 'framer-motion';
 import { useCardFilters } from '~/hooks/useCardFilters';
 import Card from './Card';
 import { CardFilter } from './CardFilter';

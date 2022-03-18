@@ -54,7 +54,7 @@ function SidebarTab({ name, setActiveTab, isActive }: SidebarTabProps) {
 			<button onClick={setActiveTab} className={clsx('title text-lg w-full p-2 relative')}>
 				{name}
 			</button>
-			{isActive && <motion.div layoutId='tab-underline' className='h-[2px] bg-brand/30' />}
+			{isActive && <motion.div layoutId='tab-underline' className='h-[2px] bg-brand/30 mx-6' />}
 		</div>
 	);
 }
