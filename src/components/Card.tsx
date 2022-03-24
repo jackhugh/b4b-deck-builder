@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { CardInterface } from '~/data/types';
 import { useStore } from '~/store';
@@ -16,19 +16,25 @@ export default React.memo(function Card({ card }: CardProps) {
 			// REVIEW - performance impact.
 			onViewportEnter={() => setShowCard(true)}
 			onViewportLeave={() => setShowCard(false)}
-			// REVIEW
-			style={{ height: 367, width: 240 }}
 		>
 			{showCard && (
 				<motion.button
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 1 }}
 					onClick={() => toggleCard(card)}
-					className={clsx('select-none')}
+					className='select-none'
 					layout='position'
 					// layoutId={card.imageUrl}
 				>
-					<img src={card.imageUrl} className='block rounded-lg' draggable={false} alt={card.name} />
+					<Image
+						src={card.imageUrl}
+						className='block rounded-lg'
+						draggable={false}
+						alt={card.name}
+						// REVIEW - fixed width/height
+						width={240}
+						height={367}
+					/>
 				</motion.button>
 			)}
 		</motion.div>
