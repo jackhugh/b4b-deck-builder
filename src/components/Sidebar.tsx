@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { transition, variants } from './CleanerSelect';
-import SaveDeck from './SaveDeck';
 
 type SidebarProps = { tabs: { name: string; component: React.ReactNode }[] };
 
@@ -41,7 +40,7 @@ export default function Sidebar({ tabs }: SidebarProps) {
 				</AnimatePresence>
 			</div>
 
-			<SaveDeck />
+			{/* <SaveDeck /> */}
 		</aside>
 	);
 }
